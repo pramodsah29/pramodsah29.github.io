@@ -1,0 +1,45 @@
+﻿.MessageDiv { 
+    margin: 5px auto; 
+    position: relative; 
+    width: 520px; 
+    height: 333px;  
+    padding: 10px;
+    padding-top:30px; 
+    box-shadow: 0 0 20px black; 
+    float:left;
+}
+.textArea {
+    height:125px;
+    width:100%;
+    resize:none;
+}
+.staticText {
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+@-webkit-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.ServicesTextArea {
+    -webkit-animation: fadein 2s ease-in;
+       -moz-animation: fadein 2s ease-in;
+            animation: fadein 2s ease-in;
+}

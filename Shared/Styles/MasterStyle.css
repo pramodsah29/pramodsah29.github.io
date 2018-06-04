@@ -1,0 +1,449 @@
+﻿/*Brown - #7d4627
+    Pink - #f2b7f5
+    pink: 242 183 245
+    blue: #2b49fb
+    purple: #9b7bfb (155 123 251)
+    dark hover: #0d1907 (13 25 7)
+    golden rod: #DAA520 rgb(218,165,32)
+    Mettalic gold: #D4AF37 rgb(212,175,55)
+Brown: 125 70 39
+    */
+
+/* Add a gray right border to all list items, except the last item (last-child) */
+.page {
+    margin-left: auto;
+    margin-right: auto;
+    /*min-width: 100%;*/
+    overflow: hidden;
+    /*min-height: 960px;*/
+}
+
+body {
+    background-color: #FBF9EF;
+    font-size: 12px;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    background: none transparent scroll repeat 0% 0%;
+    margin: 0;
+    color: #696969;
+    padding: 0px;
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    width: 85.45%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+    background-color: #9b7bfb; /*#75482f;#2b49fb; RGB: 43,73,251*/
+    /*background: -webkit-linear-gradient(#dcbcbc,#b56969);*/
+    /*background-image:url('/Images/BlueMenu.png');*/
+    border-bottom: 3px solid black;
+    z-index: 1099;
+    /*height:99px;*/
+    box-shadow: 10px 0px 10px #434543 ;
+}
+
+.contentDiv {
+    padding-top: 00px;
+    background-color: lightslategrey/*#edd9c0*/;
+    /*background-image:url('/Images/world-1302929.jpg');*/
+    /*background-image:url('/Images/wood-1047377_1920.jpg');*/
+    background-image:url('/Images/HomeBack3.jpg');
+    
+    background-size: 100%;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /*background-size: auto;*/
+    /*min-height:480px;*/
+    opacity: 1;
+    z-index: 1001;
+    box-shadow: 10px 10px 10px #434543 ; 
+
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: #434543;
+    height: 100%;
+    top: 0px;
+    /*min-height: 455px;
+    min-width: 100%;*/
+    width: 100%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-------------------SubMenu Section-----------------------*/
+#horizontalmenu a{
+    -webkit-transition: all .10s ease;
+       -moz-transition: all .10s ease;
+        -ms-transition: all .10s ease;
+         -o-transition: all .10s ease;
+            transition: all .10s ease;
+}
+
+/** ALL UL */
+#horizontalmenu ul{
+    list-style: none;
+    padding: 0;
+    color: #747474;
+
+    -webkit-font-smoothing:antialiased;
+}
+/** ALL LI */
+#horizontalmenu ul li{
+    position: relative;
+}
+/** FIRST LEVEL LI */
+#horizontalmenu>ul>li{
+    float: left;
+}
+#horizontalmenu li ul{
+    /*display: none;*/
+    position: absolute;
+    top:20px;
+    left: 0;
+    width: 135px;
+    margin-top:00px;
+    padding-top:84px;
+
+    visibility: hidden;
+    -webkit-transition: all .10s ease;
+       -moz-transition: all .10s ease;
+        -ms-transition: all .10s ease;
+         -o-transition: all .10s ease;
+            transition: all .10s ease;
+}
+#horizontalmenu li:hover ul{
+    opacity: 1;
+
+    /*display: block;*/
+    padding-top:84px;
+    height: auto;
+
+    visibility: visible;
+}
+#horizontalmenu li li{
+    /*border-bottom: 0.1px solid #ffffff;*/
+    width:135px;
+    text-align:left;
+}
+
+#horizontalmenu li li a:hover 
+{ 
+    background-color : #9b7bfb;
+    color:#0d1907;
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+
+.nonmenu:hover {
+    text-decoration: none;
+    background: #9b7bfb;
+}
+
+#nav {
+    z-index: 9999;
+}
+
+.nav-main .menu:hover A {
+    color: #9b7bfb/*#4DB0EA*/;
+    text-decoration: none;
+    background: #0d1907;
+}
+
+.nav-main li a {
+    display: block;
+    color: #0d1907;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /*background-color: #2b49fb;*/
+}
+
+.nav-main li {
+    float: left;
+    position:fixed;
+    display: block;
+}
+
+.header-wrap {
+    /*background-color: #5381AC;*/
+    background-image: url('/Images/Conference_Room.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    border-bottom-color: #000000;
+    border-bottom-width: thin;
+    padding-top: 0px !important;
+    border-bottom-style: solid;
+    top: 0px;
+    /*min-height: 670px;
+    min-width: 100%;*/
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #b56969;*/
+    /*background: -webkit-linear-gradient(#fff,#2b49fb);*/
+    background-image: url('/Images/BlueMenu.png');
+
+    font-size: 12px;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    color: #0d1907;
+}
+
+#footer a {
+    font-size: 12px;
+    font-family: Verdana;
+    color: #0d1907;
+    text-decoration: none;
+    }
+
+#footer a:Hover {
+    font-size: 12px;
+    font-family: Verdana;
+    color: white;
+    }
+
+.footerTable {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+
+.aboutDivImage {
+    opacity: 0.4;
+}
+
+.AboutContenDiv {
+
+    background-image:url('/Images/AboutBack.jpg'); 
+    min-height:480px;
+    background-size: auto;
+    opacity: 0.7;
+}
+
+.AboutTextArea {
+    font-family: Segoe UI,Optima,Arial,sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: gray;
+    opacity: 1;
+    z-index: 1005;
+    color: white;
+    /*text-shadow: 2px 2px 4px black;*/
+}
+
+.ServicesContenDiv {
+    background-image:url('/Images/ServicesBack1.png'); 
+    background-size: auto;
+    min-height:550px;
+    height:auto;
+    opacity: 0.7;
+}
+
+.ServicesTextArea {
+    font-family: Segoe UI,Optima,Arial,sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: gray;
+    opacity: 1;
+    z-index: 1005;
+    color: white;
+    /*text-shadow: 2px 2px 4px black;*/
+}
+
+.HomeContenDiv {
+    padding-top:00px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    min-height:500px;
+    z-index: 1001;
+}
+
+.HomeTextArea {
+    font-family: Segoe UI,Optima,Arial,sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: gray;
+    opacity: 1;
+    z-index: 1005;
+    color: white;
+    /*text-shadow: 2px 2px 4px black;*/
+}
+
+.HeaderTextArea {
+    padding-top:20px;
+    font-family: cominc sans;
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: #edd9c0;
+    opacity: 1;
+    text-shadow: 2px 2px 4px blue;
+}
+
+.ContactContenDiv {
+    /*background-image:url('/Images/ContactBack.jpg');*/ 
+    background-image:url('/Images/call.jpg');
+    background-size: auto;
+    min-height:610px;
+    opacity: 0.7;
+}
+
+.MyDetailsContenDiv {
+    /*background-color:whitesmoke;/*#edd9c0;*/
+    background-size: cover;
+    /*min-height:570px;*/
+    height:auto;
+    opacity: 0.7;
+
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: gray;
+    opacity: 1;
+    z-index: 1005;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.ContactTextArea {
+    font-family: Segoe UI,Optima,Arial,sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: gray;
+    opacity: 1;
+    z-index: 1005;
+    color: white;
+    /*text-shadow: 2px 2px 4px black;*/
+}
+
+[type=text],input[type=text], textarea, [type=Password]
+{
+    width: 200px;
+    border: 1px solid lightblue;
+    box-shadow: 0 0px 20px gray inset;
+    transition: 500ms all ease;
+    padding: 2px 5px 1px 0px;
+    /*color:Red;*/ 
+}
+ 
+input[type=text]:focus, textarea:focus, [type=text], [type=Password]:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+select {
+    width: 150px;
+    border: .1px solid lightblue;
+    box-shadow: 0 0px 20px gray inset;
+    transition: 500ms all ease;
+    padding: 2px 5px 1px 0px;
+    -webkit-appearance: none;
+}
+
+select:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+
+/*-----------------------------------Content Div CSS-------------------------------*/
+/*.effect8
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 10px brown, 0 0 40px black inset;
+       -moz-box-shadow:0 1px 10px brown, 0 0 40px black inset;
+            box-shadow:0 1px 10px brown, 0 0 40px black inset;
+    padding: 10px 10px 10px 10px;
+    border: 5px solid gray; 
+    background: rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+
+    -webkit-box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.75);
+    background-color: #edd9c0;
+}*/
+
+
+.effect8 {
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.5);
+  border: 2px dashed transparent;
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.bar:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  top: 0; right: 0; left: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+
+.effect8Legal {
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.5);
+  background-image:url('/Images/LeagalBack1.jpg');
+  border: 2px dashed transparent;
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.LegalServicesTextArea {
+    font-family: Segoe UI,Optima,Arial,sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    color: gray;
+    opacity: 1;
+    z-index: 1005;
+    color: black;
+    text-shadow: 2px 2px 4px gray;
+}

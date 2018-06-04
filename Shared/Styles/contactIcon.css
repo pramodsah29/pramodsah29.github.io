@@ -1,0 +1,194 @@
+/* =============================================================================
+  DEMO
+============================================================================= */
+/**
+ * Sections
+ *
+ * Some sections to define card content areas.
+ */
+.section {
+  margin-bottom: 40px;
+}
+
+.section__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+}
+
+.section__content {
+  padding-left: 3px;
+}
+
+/**
+ * The cards
+ *
+ * Each card plays home to a front and back. I've set them up as squares here
+ * by using the padding technique, but you may set them up in any dimensions
+ * you like based on your site design.
+ */
+.card {
+  position: relative;
+  float: left;
+  padding-bottom: 15%;
+  padding-right: 15%;
+  width: 10%;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+border-bottom-right-radius: 50px;
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+ 
+}
+
+.card:nth-child(1) {
+  margin-left: -3px;
+  margin-right: 10px;
+}
+
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4),
+.card:nth-child(5) {
+  margin-right: 10px;
+}
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 60px;
+border-bottom-right-radius: 60px;
+border-top-left-radius: 60px;
+border-top-right-radius: 60px;
+box-shadow: 0 0 10px lightgray;
+}
+
+.card__front,
+.card__back {
+      -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+  background-color: #ff5078;
+}
+
+.card__back {
+  background-color: #1e1e1e;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+#facebookDivFront {
+    background-image: url('/Images/Icons/facebook.png');
+    background-size: 100%;
+    width:100%;
+    height:100%;
+}
+
+#linkedinDivFront {
+    background-image: url('/Images/Icons/linkedin.png');
+    background-size: 100%;
+    width:100%;
+    height:100%;
+}
+
+#twitterDivFront {
+    background-image: url('/Images/Icons/twitter.png');
+    background-size: 100%;
+    width:100%;
+    height:100%;
+}
+
+#whatsappDivFront {
+    background-image: url('/Images/Icons/whatsapp.png');
+    background-size: 100%; 
+    width:100%;
+    height:100%;
+}
+
+#phoneDivFront {
+    background-image: url('/Images/Icons/phone.png');
+    background-size: 100%; 
+    width:100%;
+    height:100%;
+}
+/* card text */
+.card__text {
+  display: inline-block;
+  /*position: absolute;*/
+  padding-top:25px;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 5px;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size:xx-small;
+  line-height: 10px;
+  vertical-align:top;
+  text-align:center;
+}
+
+/* hover effect */
+.card.effect__hover:hover .card__front {
+            -webkit-transform: scale(2.9);
+    -ms-transform: scale(2.9);
+    transform: scale(2.9);
+    z-index: 1101;
+
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+
+    -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__hover:hover .card__back {
+    -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+
+          -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+    z-index: 1101;
+
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;   
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+/* random effect */
+.card.effect__random.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__random.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}

@@ -1,0 +1,553 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GenStarMaster.master.cs" Inherits="GenStarBusinessSolutions.GenStarMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link href='Shared/Styles/MasterStyle.css?v=v2173' rel='stylesheet' type='text/css' />
+    <link href='Shared/Styles/Login.css?v=v2173' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+
+    <script type="text/javascript">
+        function changeClass(el){
+            $("a.activable.active").removeClass("active");
+            $(this).addClass("active");
+        }
+
+        function buttonCancel() {
+            document.getElementById('light').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+            return false;
+        }
+        
+        function buttonCancelSignout() {
+            document.getElementById('lightSignout').style.display = 'none';
+            document.getElementById('fadeSignout').style.display = 'none';
+            return false;
+        }
+
+        function buttonCancelSignup() {
+            document.getElementById('lightSignup').style.display = 'none';
+            document.getElementById('fadeSignup').style.display = 'none';
+            return false;
+        }
+
+        function HomeHover() {
+            document.getElementById("navLogoHome").src = "/Images/homeBlue.png";
+        }
+
+        function HomeOut() {
+            document.getElementById("navLogoHome").src = "/Images/homeBlack.png";
+        }
+
+        function ServicesHover() {
+            document.getElementById("navLogoServices").src = "/Images/ServicesBlue.png";
+        }
+
+        function ServicesOut() {
+            document.getElementById("navLogoServices").src = "/Images/ServicesBlack.png";
+        }
+
+        function ContactHover() {
+            document.getElementById("navLogoContact").src = "/Images/ContactBlue.png";
+        }
+
+        function ContactOut() {
+            document.getElementById("navLogoContact").src = "/Images/ContactBlack.png";
+        }
+
+        function AboutHover() {
+            document.getElementById("navLogoAbout").src = "/Images/AboutUsBlue.png";
+        }
+
+        function AboutOut() {
+            document.getElementById("navLogoAbout").src = "/Images/AboutUsBlack.png";
+        }
+
+        function LoginHover() {
+            document.getElementById("navLogoSignIn").src = "/Images/LoginBlue.png";
+        }
+
+        function LoginOut() {
+            document.getElementById("navLogoSignIn").src = "/Images/LoginBlack.png";
+        }
+
+        function JoinHover() {
+            document.getElementById("navLogoJoin").src = "/Images/SignupBlue.png";
+        }
+
+        function JoinOut() {
+            document.getElementById("navLogoJoin").src = "/Images/SignupBlack.png";
+        }
+
+        //To be changes as per the new icons
+        function LogoutHover() {
+            document.getElementById("navLogoLogOut").src = "/Images/LoginBlue.png";
+        }
+
+        function LogoutOut() {
+            document.getElementById("navLogoLogOut").src = "/Images/LoginBlack.png";
+        }
+
+        function DetailsHover() {
+            document.getElementById("navLogoMyAccount").src = "/Images/SignupBlue.png";
+        }
+
+        function DetailsOut() {
+            document.getElementById("navLogoMyAccount").src = "/Images/SignupBlack.png";
+        }
+        //To be chnages as per the new icons
+
+        function MenuClick(element) {
+            var clickedItem = element.id;
+
+            document.getElementById("liHome").style.backgroundColor = "blue";
+            document.getElementById("liServices").style.backgroundColor = "blue";
+            document.getElementById("liAbout").style.backgroundColor = "blue";
+            document.getElementById("liContact").style.backgroundColor = "blue";
+
+            document.getElementById(clickedItem).style.backgroundColor = "black";
+        }
+    </script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header-wrap">
+            <table width="100%">
+                <tr>
+                    <td width="7%"></td>
+                    <td>
+                        <div id="horizontalmenu">
+                            <ul id="mainUL" class="nav-main" runat="server">
+                                <li width="100%" height="100%" class="nonmenu">
+                                    <a runat="server" id="aHomeIcon" href="~/Home.aspx" >
+                                        <img src="/Images/LogoPink1.jpg" alt="testCompanyName"/>
+                                    </a>
+                                </li>
+                                <li runat="server" id="liHome" class="menu" width="100%" onmouseover="HomeHover();" onmouseout="HomeOut();" >
+                                    <a runat="server" id="aHome" class="activable" href="~/Home.aspx">
+                                        Home
+                                        <br />
+                                        <img runat="server" id="navLogoHome" src="/Images/homeBlack.png" alt=""/>
+                                    </a>
+                                </li>
+                                <li runat="server" id="liServices" class="menu"  width="100%" onmouseover="ServicesHover();" onmouseout="ServicesOut();" >
+                                    <a runat="server" id="aServices" class="activable" href="~/OurServices.aspx">
+                                        Services
+                                        <br />
+                                        <img runat="server" id="navLogoServices" src="/Images/ServicesBlack.png" alt=""/>
+                                    </a>
+                                    <ul class="nav-main-submenu">
+                                        <li class="smli"> <a  href =""  title ="Service1">Service Type 1</a ></li> 
+                                        <li class="smli"> <a  href =""  title ="Service2">Service Type 2</a ></li>
+                                        <li class="smli"> <a  href =""  title ="Service3">Service Type 3</a ></li>
+                                    </ul>
+                                </li>
+                                <li runat="server" id="liAbout" class="menu" width="100%" onmouseover="AboutHover();" onmouseout="AboutOut();" >
+                                    <a runat="server" id="aAbout" class="activable" href="~/About.aspx" onclick="changeClass(this);">
+                                        About
+                                        <br />
+                                        <img runat="server" id="navLogoAbout" src="/Images/AboutUSBlack.png" alt=""/>
+                                    </a>
+                                </li>
+                                <li runat="server" id="liContact" class="menu"  width="100%" onmouseover="ContactHover();" onmouseout="ContactOut();" >
+                                    <a runat="server" id="aContact" class="activable" href="~/Contact.aspx" onclick="changeClass(this);">
+                                        Contact
+                                        <br />
+                                        <img runat="server" id="navLogoContact" src="/Images/ContactBlack.png" alt=""/>
+                                    </a>
+                                </li>
+                                
+                                <li width="100%"></li>
+                                <li runat="server" id="liJoin" style="float: right" class="menu" width="100%" onmouseover="JoinHover();" onmouseout="JoinOut();">
+                                    <a onclick="document.getElementById('lightSignup').style.display='block';document.getElementById('fadeSignup').style.display='block'" href="javascript:void(0)">
+                                        Join Us
+                                        <br />
+                                        <img runat="server" id="navLogoJoin" src="/Images/SignupBlack.png" alt=""/>
+                                    </a>
+                                </li>
+                                <li runat="server" id="liLogin" class="menu" style="float: right" width="100%" onmouseover="LoginHover();" onmouseout="LoginOut();">
+                                    <a onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" href="javascript:void(0)">
+                                        Login
+                                        <br />
+                                        <img runat="server" id="navLogoSignIn" src="/Images/LoginBlack.png" alt=""/>
+                                    </a>
+                                </li>
+
+                                <%--logged in section--%>
+                                <li runat="server" id="liMyAccount" style="float: right" visible="false" class="menu" width="100%" onmouseover="DetailsHover();" onmouseout="DetailsOut();">
+                                    <a class="activable" href="../MyDetails.aspx" onclick="changeClass(this);">
+                                        My Account
+                                        <br />
+                                        <img runat="server" id="navLogoMyAccount" src="/Images/SignupBlack.png" alt=""/>
+                                    </a>
+                                </li>
+                                <li runat="server" id="liLogOut" visible="false" class="menu" style="float: right" width="100%" onmouseover="LogoutHover();" onmouseout="LogoutOut();" >
+                                    <a onclick="document.getElementById('lightSignout').style.display='block';document.getElementById('fadeSignout').style.display='block'" href="javascript:void(0)">
+                                        Log Out
+                                        <br />
+                                        <img runat="server" id="navLogoLogOut" src="/Images/LoginBlack.png" alt=""/>
+                                    </a>
+                                </li>
+                                <%--logged in section--%>
+                            </ul>
+                            <%--<ul class="nav-main-submenu">
+                                <li class="smli"> <a  href =""  title ="Service1">Service Type 1</a ></li> 
+                                <li class="smli"> <a  href =""  title ="Service2">Service Type 2</a ></li>
+                                <li class="smli"> <a  href =""  title ="Service3">Service Type 3</a ></li>
+                            </ul>--%>
+                        </div>
+                    </td>
+                    <td width="7%"></td>
+                </tr>
+                <%--Login Content--%>
+                <tr>
+                    <td>
+                        <div id="light" class="white_content">
+                            <table cellpadding="0" cellspacing="0" border="0" style="background-color: #edd9c0;" width="100%">
+                                <%--<tr>
+                                    <td height="16px">
+                                        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+                                            <img src="Images/CloseIcon.jpg" style="border-style: none; border-color: inherit; border-width: 0px; height: 17px; width: 16px;"
+                                                align="right" /></a>
+                                    </td>
+                                </tr>--%>
+                                <tr>
+                                    <td style="padding-left: 16px; padding-right: 16px; padding-bottom: 16px">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #edd9c0;"
+                                            width="100%">
+                                            <tr>
+                                                <td>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" class="headertext">&nbsp;&nbsp;&nbsp;Login Window
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Username:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="_txtUserid" runat="server"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="_txtUserid"
+                                                                    ErrorMessage="Please enter your username" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Password:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="_txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="_txtPassword"
+                                                                    ErrorMessage="Please enter your password" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>
+                                                                <asp:Button ID="_btnLogin" runat="server" CssClass="button2" Text="Login" ValidationGroup="a" OnClick="_btnLogin_Click" CausesValidation="False" />
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                <asp:Button ID="_btnCancel" runat="server" CssClass="button2" Text="Cancel" OnClientClick ="buttonCancel();return false;"/>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10px"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="fade" class="black_overlay">
+                        </div>
+                    </td>
+                </tr>
+
+                <%--SignUp Content--%>
+                <tr>
+                    <td>
+                        <div id="lightSignup" class="white_content">
+                            <table cellpadding="0" cellspacing="0" border="0" style="background-color: #edd9c0;" width="100%">
+                                <%--<tr>
+                                    <td height="16px">
+                                        <a href="javascript:void(0)" onclick="document.getElementById('lightSignup').style.display='none';document.getElementById('fadeSignup').style.display='none'">
+                                            <img src="Images/CloseIcon.jpg" style="border-style: none; border-color: inherit; border-width: 0px; height: 17px; width: 16px;"
+                                                align="right" /></a>
+                                    </td>
+                                </tr>--%>
+                                <tr>
+                                    <td style="padding-left: 16px; padding-right: 16px; padding-bottom: 16px">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #edd9c0"
+                                            width="100%">
+                                            <tr>
+                                                <td>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" class="headertext">&nbsp;&nbsp;&nbsp;Signup Window
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">First Name:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtFirstName"
+                                                                    ErrorMessage="Please enter your username" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Last Name:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtLastName"
+                                                                    ErrorMessage="Please enter your username" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Email Address:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtEmailAddress"
+                                                                    ErrorMessage="Please enter your email address" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">User Type:
+                                                            </td>
+                                                            <td>
+                                                                <asp:DropDownList ID="ddlUserType" runat="server" >
+                                                                    <asp:ListItem Text="--None--" Value="-1"></asp:ListItem>
+                                                                    <asp:ListItem Text="Job Seeker" Value="1"></asp:ListItem>
+                                                                    <asp:ListItem Text="Employer" Value="2"></asp:ListItem>
+                                                                    <asp:ListItem Text="Internal User" Value="3"></asp:ListItem>
+                                                                </asp:DropDownList>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ddlUserType"
+                                                                    ErrorMessage="Please enter your username" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Username:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="txtUserid" runat="server"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtUserid"
+                                                                    ErrorMessage="Please enter your username" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Password:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPassword"
+                                                                    ErrorMessage="Please enter your password" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="bot_text">Confirm Password:
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="10px"></td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtConfirmPassword"
+                                                                    ErrorMessage="Please enter your password" ValidationGroup="a" CssClass="content3"></asp:RequiredFieldValidator>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>
+                                                                <asp:Button ID="btnSingup" runat="server" CssClass="button2" Text="Join Now" ValidationGroup="a"
+                                                                    OnClick="_btnLogin_Click" />
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                <asp:Button ID="btnSignup" runat="server" CssClass="button2" Text="Cancel" OnClientClick ="buttonCancelSignUp();return false;"/>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10px"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="fadeSignup" class="black_overlay">
+                        </div>
+                    </td>
+                </tr>
+
+                <%--Logout Content--%>
+                <tr>
+                    <td>
+                        <div id="lightSignout" class="white_content">
+                            <table cellpadding="0" cellspacing="0" border="0" style="background-color: #edd9c0;" width="100%">
+                                <%--<tr>
+                                    <td height="16px">
+                                        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+                                            <img src="Images/CloseIcon.jpg" style="border-style: none; border-color: inherit; border-width: 0px; height: 17px; width: 16px;"
+                                                align="right" /></a>
+                                    </td>
+                                </tr>--%>
+                                <tr>
+                                    <td style="padding-left: 16px; padding-right: 16px; padding-bottom: 16px">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #edd9c0;"
+                                            width="100%">
+                                            <tr>
+                                                <td>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" class="headertext">&nbsp;&nbsp;&nbsp;Logout
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table>
+                                                        <tr>
+                                                            <td align="right" class="bot_text" colspan="2">
+                                                                Are you sure you want to Logout?
+                                                            </td>
+                                                        </tr>
+                                                        <tr height="25px"><td></td></tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>
+                                                                <asp:Button ID="_btnSignout" runat="server" CssClass="button2" Text="Yes" ValidationGroup="a" OnClick="_btnSignout_Click" CausesValidation="False" />
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                <asp:Button ID="Button2" runat="server" CssClass="button2" Text="No" OnClientClick ="buttonCancelSignout();return false;"/>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10px"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="fadeSignout" class="black_overlay">
+                        </div>
+                    </td>
+                </tr>
+                <%--Content Page--%>
+                <tr>
+                    <td width="7%"></td>
+                    <td>
+                        <div class="contentDiv">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td width="7%"></td>
+                </tr>
+            <%--</table>
+            <table>--%>
+                <tr>
+                    <td width="7%"></td>
+                    <td>
+                        <div id="footer" style="padding-bottom: 25px; padding-top: 30px; box-shadow: 10px 10px 10px #434543 ;">
+                            <table width="100%" class="footerTable"> 
+                                <tr>
+                                    <td align="center" vertical-align="center">
+                                        GenStar Business Solutions ©2016
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" vertical-align="center">
+                                        We create experiance by delivering results
+                                    </td>
+                                </tr>
+                            </table> 
+                        </div>
+                    </td>
+                    <td width="7%"></td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
+
