@@ -16,3 +16,10 @@ C:\Users\IBM_ADMIN\Desktop\Back up\Pramod\GenStarBusinessSolutions\GenStarBusine
 C:\Users\IBM_ADMIN\Desktop\Back up\Pramod\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Debug\GenStarBusinessSolutions.csprojResolveAssemblyReference.cache
 C:\Users\IBM_ADMIN\Desktop\Back up\Pramod\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Debug\GenStarBusinessSolutions.dll
 C:\Users\IBM_ADMIN\Desktop\Back up\Pramod\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Debug\GenStarBusinessSolutions.pdb
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\GenStarBusinessSolutions.dll.config
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\GenStarBusinessSolutions.dll
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\GenStarBusinessSolutions.pdb
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\AjaxControlToolkit.dll
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Debug\GenStarBusinessSolutions.csprojResolveAssemblyReference.cache
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Debug\GenStarBusinessSolutions.dll
+D:\Hands On\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Debug\GenStarBusinessSolutions.pdb

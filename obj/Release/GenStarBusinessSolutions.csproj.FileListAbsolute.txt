@@ -1,7 +1,0 @@
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\GenStarBusinessSolutions.dll.config
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\GenStarBusinessSolutions.dll
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\GenStarBusinessSolutions.pdb
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\bin\AjaxControlToolkit.dll
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Release\GenStarBusinessSolutions.csprojResolveAssemblyReference.cache
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Release\GenStarBusinessSolutions.dll
-F:\PD BAckup\GenStarBusinessSolutions\GenStarBusinessSolutions\obj\Release\GenStarBusinessSolutions.pdb
